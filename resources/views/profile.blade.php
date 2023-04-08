@@ -2,7 +2,29 @@
 @section('title','Авторизация')
 @section('content')
 <main>
+<<<<<<< HEAD
     <div class="addData">
+=======
+
+    <div class="profile-container">
+        <div class="profile">
+            @if($user->role == 'admin')
+            <div class="panel-add-users">
+                <p>Добавление пользователя</p>
+                <input type="text" placeholder="введите логин" id="regLogin">
+                <input type="text" placeholder="введите пароль" id="regPassword">
+                <select name="" id="">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <button type="submit" id="btnReg" onclick="sendData()">Добавить</button>
+            </div>
+            @endif
+        <div>
+    </div>
+
+>>>>>>> 211536a33cf112a9f0ad8cf8b3444a08796c023a
     <form action="" method="post">
         <label for="WorkSpace">Рабочая область:</label>
         <input name="WorkSpace" list="WorkSpaceList" id="WorkSpace">
@@ -128,12 +150,17 @@
         <label for="Sunday">Воскресение:</label>
         <input name="Sunday" id="Sunday">
         
+<<<<<<< HEAD
         <label for="Check">Проверка:</label>
         <input name="Check" id="Check">
 
         <button>Отправить</button>
+=======
+        <input name="Check" id="Check">       
+>>>>>>> 211536a33cf112a9f0ad8cf8b3444a08796c023a
     </form>
     </div>
     
 </main>
+<script src="{{ url('/js/addUser.js') }}"></script>
 @endsection

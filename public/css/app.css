@@ -22,13 +22,6 @@ body{
 /* 
     auth zone
 */
-.profile{
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
 
 .auth form{
     width: 100%;
@@ -67,6 +60,7 @@ body{
     text-align: center;
     margin: 10px 0 0 0;
 }
+<<<<<<< HEAD
 
 .addData{
     background-color: chocolate;
@@ -84,3 +78,42 @@ body{
     margin: 0 0 10px 0;
 }
 
+=======
+/* 
+    profile zone
+*/
+.profile-container{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+.profile{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+} 
+.panel-add-users p{
+    font-size: 32px;
+}
+.panel-add-users{
+    display: flex;
+    flex-direction: column;
+}
+.panel-add-users input{
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding: 0 10px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+.panel-add-users button{
+    cursor: pointer;
+    border: 1px solid #000;
+    background-color: chocolate;
+    color: #fff;
+    padding: 10px 10px;
+    margin: 10px 0px;
+}
+>>>>>>> 211536a33cf112a9f0ad8cf8b3444a08796c023a
