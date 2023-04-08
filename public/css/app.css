@@ -1,14 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 body{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .auth{
+    width: 400px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.auth form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+    padding: 10px 20px 20px 20px;
+}
+.strokeLogin{
+    position: relative;
+}
+.strokeLogin label{
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    transition: .2s;
+    background-color: #fff;
+    font-size: 16px;
+    border-radius: 2px;
+    padding: 1px 3px;
+}
+.auth form .strokeLogin input, .auth form button{
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding: 0 10px;
+    height: 30px;
+}
+.auth form button{
+    cursor: pointer;
 }
