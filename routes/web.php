@@ -20,3 +20,6 @@ Route::get('/auth', function () {
 Route::get('/', function () {
     return view('index');
 });
+
+Route::post('/auth/in','App\Http\Controllers\AuthController@auth')
+->name('auth');
