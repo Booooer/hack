@@ -22,6 +22,7 @@ return array(
     'App\\Models\\DeliveryPlan' => $baseDir . '/app/Models/DeliveryPlan.php',
     'App\\Models\\IikoRemains' => $baseDir . '/app/Models/IikoRemains.php',
     'App\\Models\\NameSupplier' => $baseDir . '/app/Models/NameSupplier.php',
+    'App\\Models\\TargetPrices' => $baseDir . '/app/Models/TargetPrices.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\WorkSpace' => $baseDir . '/app/Models/WorkSpace.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

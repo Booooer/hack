@@ -536,6 +536,7 @@ class ComposerStaticInit174e952ea1327ae380e0780f63660b5c
         'App\\Models\\DeliveryPlan' => __DIR__ . '/../..' . '/app/Models/DeliveryPlan.php',
         'App\\Models\\IikoRemains' => __DIR__ . '/../..' . '/app/Models/IikoRemains.php',
         'App\\Models\\NameSupplier' => __DIR__ . '/../..' . '/app/Models/NameSupplier.php',
+        'App\\Models\\TargetPrices' => __DIR__ . '/../..' . '/app/Models/TargetPrices.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\WorkSpace' => __DIR__ . '/../..' . '/app/Models/WorkSpace.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
