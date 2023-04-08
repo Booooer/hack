@@ -2,9 +2,8 @@
 @section('title','Авторизация')
 @section('content')
 <main>
-<<<<<<< HEAD
+
     <div class="addData">
-=======
 
     <div class="profile-container">
         <div class="profile">
@@ -24,7 +23,7 @@
         <div>
     </div>
 
->>>>>>> 211536a33cf112a9f0ad8cf8b3444a08796c023a
+
     <form action="" method="post">
         <label for="WorkSpace">Рабочая область:</label>
         <input name="WorkSpace" list="WorkSpaceList" id="WorkSpace">
@@ -150,14 +149,14 @@
         <label for="Sunday">Воскресение:</label>
         <input name="Sunday" id="Sunday">
         
-<<<<<<< HEAD
+
         <label for="Check">Проверка:</label>
         <input name="Check" id="Check">
 
         <button>Отправить</button>
-=======
+
         <input name="Check" id="Check">       
->>>>>>> 211536a33cf112a9f0ad8cf8b3444a08796c023a
+
     </form>
     </div>
     
