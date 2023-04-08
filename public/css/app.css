@@ -18,7 +18,7 @@ body{
     align-items: center;
     flex-direction: column;
 }
-<<<<<<< HEAD
+
 /* 
     auth zone
 */
@@ -28,8 +28,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-=======
+} 
+
 .auth form{
     width: 100%;
     display: flex;
@@ -58,5 +58,4 @@ body{
 }
 .auth form button{
     cursor: pointer;
->>>>>>> 39de69fc364635fbd28472771504d079c8111a6b
 }

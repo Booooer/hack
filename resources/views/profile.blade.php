@@ -4,6 +4,9 @@
 <main>
     <div class="profile">
     Здравствуйте,{{ $user->login }}
+    <div>
+        
+    </div>
     </div>
 </main>
 @endsection
