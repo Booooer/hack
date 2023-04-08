@@ -24,4 +24,29 @@ class AuthController extends Controller
         }
         return back()->withErrors(['message' => 'Авторизация не удалась!']);
     }
+
+    public function addUser(){
+        $data = json_decode(file_get_contents("php://input"));
+
+        if ($this->checkUniqueUser($data[0])) {
+            User::create([
+                'login' => $data[0],
+                'password' => $data[1],
+                'role' => 'admin',
+            ]);
+
+            return json_encode("Пользователь успешно добавлен");
+        }
+        else{
+            return json_encode("Такой пользователь уже есть");
+        }
+    }
+
+    private function checkUniqueUser($login){
+        $check = User::where('login',$login)->first();
+        if (isset($check)) {
+            return false;
+        }
+        return true;
+    }
 }

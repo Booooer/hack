@@ -21,5 +21,4 @@
         </form>
     </div>
 </main>
-<script src="{{ url('/js/app.js') }}"></script>
 @endsection

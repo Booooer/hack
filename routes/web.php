@@ -25,3 +25,5 @@ Route::post('/auth/in','App\Http\Controllers\AuthController@auth')
     ->name('auth');
 
 Route::get('profile','App\Http\Controllers\AuthController@show');    
+
+Route::post('/reg','App\Http\Controllers\AuthController@addUser');
