@@ -9,6 +9,12 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+    public function show(){
+        $user = Auth::user();
+
+        return view('profile',compact('user'));
+    }
+
     public function auth(Request $request){
         $user = User::where('login',$request->login)->where('password',$request->password)->first();
 

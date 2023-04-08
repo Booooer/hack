@@ -2,6 +2,8 @@
 @section('title','Авторизация')
 @section('content')
 <main>
-    "Profile"
+    <div class="profile">
+    Здравствуйте,{{ $user->login }}
+    </div>
 </main>
 @endsection
