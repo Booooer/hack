@@ -5,6 +5,16 @@
     <div class="profile-container">
         <div class="profile">
             @if($user->role == 'admin')
+
+            <div class="choiceAddPanel">
+                <div class="addUsersPanel" onclick="selectUserPanel()">
+                    Пользователи
+                </div>
+                <div class="addProductsPanel" onclick="selectProductPanel()">
+                    Товары
+                </div>
+            </div>
+
             <div class="panel-add-users">
                 <p>Добавление пользователя</p>
                 <input type="text" placeholder="введите логин" id="regLogin">
@@ -19,8 +29,9 @@
 
                 </div>
             </div>
+
             <div class="panel-add-products">
-            <p>Добавление товара</p>
+                <p>Добавление товара</p>
                 <input type="text" placeholder="Элемент номенклатуры" id="elementNm">
                 <select name="category" id="categoryNm">
                     <option value="Кофе зерновой">Кофе зерновой</option>
@@ -46,6 +57,7 @@
 
                 </div>
             </div>
+
             @endif
         <div>
     </div>
@@ -186,4 +198,5 @@
     </div>
 </main>
 <script src="{{ url('/js/addUser.js') }}"></script>
+<script src="{{ url('/js/choiceAddPanel.js') }}"></script>
 @endsection

@@ -126,4 +126,23 @@ body{
     margin: 10px 0px;
 }
 
+.choiceAddPanel{
+    width: 500px;
+    height: 40px;
+    background-color: chocolate;
+    display: flex;
+    justify-content: space-between;
+}
 
+.addUsersPanel, .addProductsPanel{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.addPanelActive{
+    background-color: brown;
+}
