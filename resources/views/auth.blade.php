@@ -14,6 +14,9 @@
                 <label id="passwordLabel" for="password">Пароль</label>
                 <input id="password" type="text" name="password">
             </div>
+            <div class="showMessage">
+                {{ $errors->first() }}
+            </div>
             <button id="buttonLogin" type="submit">Войти</button>
         </form>
     </div>

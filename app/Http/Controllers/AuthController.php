@@ -22,6 +22,6 @@ class AuthController extends Controller
             Auth::login($user);
             return view('profile',compact('user'));
         }
-        return "sdsd";
+        return back()->withErrors(['message' => 'Авторизация не удалась!']);
     }
 }
