@@ -14,29 +14,37 @@
                     <option value="buyer">Закупщик</option>
                     <option value="analytic">Аналитик</option>
                 </select>
-                <button type="submit" id="btnReg" onclick="sendData()">Добавить</button>
+                <button type="submit" id="btnReg" onclick="sendUser()">Добавить</button>
                 <div class="reg-answer">
 
                 </div>
             </div>
             <div class="panel-add-products">
             <p>Добавление товара</p>
-                <input type="text" placeholder="Категория номенклатуры" id="regLogin">
-                <input type="text" placeholder="Элемент номенклатуры" id="regPassword">
-                <select name="category" id="regRole">
-                    <option value="commandor">Кофе зерновой</option>
-                    <option value="buyer">Молочная продукция</option>
-                    <option value="analytic">Прочее</option>
-                    <option value="analytic">Соуса</option>
-                    <option value="analytic">Специи</option>
-                    <option value="analytic">Хлеб</option>
-                    <option value="analytic">Альтернативное молоко</option>
-                    <option value="analytic">Мороженое</option>
-                    <option value="analytic">Альтернативное молоко</option>
-                    <option value="analytic">Альтернативное молоко</option>
-                    <option value="analytic">Альтернативное молоко</option>
+                <input type="text" placeholder="Элемент номенклатуры" id="elementNm">
+                <select name="category" id="categoryNm">
+                    <option value="Кофе зерновой">Кофе зерновой</option>
+                    <option value="Молочная продукция">Молочная продукция</option>
+                    <option value="Прочее">Прочее</option>
+                    <option value="Соуса">Соуса</option>
+                    <option value="Специи">Специи</option>
+                    <option value="Хлеб">Хлеб</option>
+                    <option value="Альтернативное молоко">Альтернативное молоко</option>
+                    <option value="Мороженое">Мороженое</option>
+                    <option value="Паста ореховая">Паста ореховая</option>
+                    <option value="Чай">Чай</option>
+                    <option value="Консервы">Консервы</option>
+                    <option value="Шоколад">Шоколад</option>
+                    <option value="Пищевые добавки">Пищевые добавки</option>
+                    <option value="Рыба">Рыба</option>
+                    <option value="Яйца">Яйца</option>
+                    <option value="Крупы">Крупы</option>
                 </select>
-                <button type="submit" id="btnReg" onclick="sendData()">Добавить</button>
+                <input type="text" placeholder="Итог" id="total">
+                <button type="submit" id="btnReg" onclick="sendProducts()">Добавить</button>
+                <div class="product-answer">
+
+                </div>
             </div>
             @endif
         <div>

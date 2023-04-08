@@ -120,6 +120,9 @@ body{
 }
 .profile select{
     padding: 10px 5px;
+    margin: 5px 0px;
+}
+.profile label{
     margin: 10px 0px;
 }
 
