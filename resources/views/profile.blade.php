@@ -24,7 +24,7 @@
                     <option value="buyer">Закупщик</option>
                     <option value="analytic">Аналитик</option>
                 </select>
-                <button type="submit" id="btnReg" onclick="sendUser()">Добавить</button>
+                <button type="submit" id="btnReg" class="btnReg" onclick="sendUser()">Добавить</button>
                 <div class="reg-answer">
 
                 </div>
@@ -197,6 +197,7 @@
     @endif
     </div>
 </main>
+<script src="{{ url('/js/addUserValidate.js') }}"></script>
 <script src="{{ url('/js/addUser.js') }}"></script>
 <script src="{{ url('/js/choiceAddPanel.js') }}"></script>
 @endsection

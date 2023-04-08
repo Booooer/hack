@@ -10,6 +10,5 @@
 </head>
 <body>
     @yield('content')
-<script src="{{ url('/js/app.js') }}"></script>
 </body>
 </html>
