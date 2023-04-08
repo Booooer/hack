@@ -20,3 +20,8 @@ Route::get('/auth', function () {
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/main', function () {
+    return view('main');
+});
+
