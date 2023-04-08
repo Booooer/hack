@@ -72,16 +72,18 @@ body{
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 } 
-.panel-add-users p{
+.profile p{
     font-size: 32px;
 }
-.panel-add-users{
+.panel-add-users,.panel-add-products{
+    text-align: center;
     display: flex;
     flex-direction: column;
 }
-.panel-add-users input{
+.profile input{
     width: 100%;
     margin: 20px 0 0 0;
     padding: 0 10px;
@@ -89,11 +91,15 @@ body{
     border: none;
     border-bottom: 1px solid #000;
 }
-.panel-add-users button{
+.profile button{
     cursor: pointer;
     border: 1px solid #000;
     background-color: chocolate;
     color: #fff;
     padding: 10px 10px;
+    margin: 10px 0px;
+}
+.profile select{
+    padding: 10px 5px;
     margin: 10px 0px;
 }

@@ -32,7 +32,7 @@ class AuthController extends Controller
             User::create([
                 'login' => $data[0],
                 'password' => $data[1],
-                'role' => 'admin',
+                'role' => $data[2],
             ]);
 
             return json_encode("Пользователь успешно добавлен");

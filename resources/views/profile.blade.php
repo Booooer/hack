@@ -10,17 +10,39 @@
                 <p>Добавление пользователя</p>
                 <input type="text" placeholder="введите логин" id="regLogin">
                 <input type="text" placeholder="введите пароль" id="regPassword">
-                <select name="" id="">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                <select name="role" id="regRole">
+                    <option value="commandor">Управляющий</option>
+                    <option value="buyer">Закупщик</option>
+                    <option value="analytic">Аналитик</option>
+                </select>
+                <button type="submit" id="btnReg" onclick="sendData()">Добавить</button>
+                <div class="reg-answer">
+
+                </div>
+            </div>
+            <div class="panel-add-products">
+            <p>Добавление товара</p>
+                <input type="text" placeholder="Категория номенклатуры" id="regLogin">
+                <input type="text" placeholder="Элемент номенклатуры" id="regPassword">
+                <select name="category" id="regRole">
+                    <option value="commandor">Кофе зерновой</option>
+                    <option value="buyer">Молочная продукция</option>
+                    <option value="analytic">Прочее</option>
+                    <option value="analytic">Соуса</option>
+                    <option value="analytic">Специи</option>
+                    <option value="analytic">Хлеб</option>
+                    <option value="analytic">Альтернативное молоко</option>
+                    <option value="analytic">Мороженое</option>
+                    <option value="analytic">Альтернативное молоко</option>
+                    <option value="analytic">Альтернативное молоко</option>
+                    <option value="analytic">Альтернативное молоко</option>
                 </select>
                 <button type="submit" id="btnReg" onclick="sendData()">Добавить</button>
             </div>
             @endif
         <div>
     </div>
-
+    @if($user->role == 'commandor')
     <form action="" method="post">
         <input name="WorkSpace" list="WorkSpaceList" id="WorkSpace">
         
@@ -123,6 +145,7 @@
         
         <input name="Check" id="Check">       
     </form>
+    @endif
 </main>
 <script src="{{ url('/js/addUser.js') }}"></script>
 @endsection
