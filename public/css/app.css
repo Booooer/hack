@@ -60,6 +60,25 @@ body{
     text-align: center;
     margin: 10px 0 0 0;
 }
+
+
+.addData{
+    background-color: chocolate;
+    padding: 20px;
+}
+
+.addData form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.addData form input, .addData form button{
+    height: 30px;
+    margin: 0 0 10px 0;
+}
+
+
 /* 
     profile zone
 */
@@ -103,3 +122,5 @@ body{
     padding: 10px 5px;
     margin: 10px 0px;
 }
+
+
