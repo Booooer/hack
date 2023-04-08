@@ -63,7 +63,6 @@ body{
 
 
 .addData{
-    background-color: chocolate;
     padding: 20px;
 }
 
@@ -115,7 +114,8 @@ body{
     border: 1px solid #000;
     background-color: chocolate;
     color: #fff;
-    padding: 10px 10px;
+    height: 30px;
+    padding: 0 10px;
     margin: 10px 0px;
 }
 .profile select{

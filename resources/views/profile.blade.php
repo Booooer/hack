@@ -173,9 +173,6 @@
         <input name="Check" id="Check">
 
         <button>Отправить</button>
-
-        <input name="Check" id="Check">       
-
     </form>
     @endif
     </div>
