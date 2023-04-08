@@ -13,16 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('remains', function (Blueprint $table) {
             $table->id();
-            $table->string('categorya_3')->nullable();
-            $table->string('categorya_nomenklatyri')->nullable();
-            $table->string('element_nomenklatyri')->nullable();
+            $table->string('ostatki')->nullable();
+            $table->string('name')->nullable();
+            $table->string('SKU')->nullable();
             $table->float('itog')->nullable();
             $table->timestamps();
         });
     }
-    // fdgd
 
     /**
      * Reverse the migrations.
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('remains');
     }
 };
