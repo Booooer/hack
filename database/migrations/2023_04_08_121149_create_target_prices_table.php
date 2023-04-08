@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('target_prices', function (Blueprint $table) {
             $table->id();
-            $table->string('*');
+            $table->string('Название');
             $table->string('Территория');
             $table->string('А/В');
             $table->string('Категория');
