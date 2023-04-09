@@ -12,7 +12,7 @@
     </div>
     <div class="profile-container">
         <div class="profile">
-            @if($user->role == 'admin')
+        @if($user->role == 'admin')
 
             <!-- вкладки -->
             <div class="choiceAddPanel">
@@ -278,7 +278,7 @@
                     <button>Отправить</button>
                 </form>
                 @endif
-                @if($user->role == 'buyer')
+                @if(Auth::user()->role == 'buyer')
                 <p>Заказ поставщику</p>
                 <table>
                     <thead>

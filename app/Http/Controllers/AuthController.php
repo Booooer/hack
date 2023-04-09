@@ -20,8 +20,9 @@ class AuthController extends Controller
         $user = Auth::user();
         $products = Product::all();
         $finals = FinalOrder::get();
+        $role = $user->role;
        
-        return view('profile', compact('users','user','products','finals'));
+        return view('profile', compact('users','user','products','finals','role'));
 
     }
 
@@ -32,7 +33,7 @@ class AuthController extends Controller
 
         if (isset($user)) {
             Auth::login($user);
-            return view('profile', ['user' => $user, 'users' => $users]);
+            return redirect()->route('profile');
         }
         return back()->withErrors(['message' => 'Авторизация не удалась!']);
     }
