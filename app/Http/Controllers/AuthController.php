@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\FinalOrder;
+use App\Models\Product;
+
 
 class AuthController extends Controller
 {
@@ -14,8 +17,11 @@ class AuthController extends Controller
     public function show()
     {
         $users = User::get();
-
-        return view('profile', compact('users'));
+        $user = Auth::user();
+        $products = Product::all();
+        $finals = FinalOrder::get();
+       
+        return view('profile', compact('users','user','products','finals'));
 
     }
 
@@ -62,5 +68,12 @@ class AuthController extends Controller
     public function updateRole(Request $request)
     {
         User::where('login', $request->login)->update(['role' => $request->role]);
+        return redirect()->route('profile');
+    }
+
+    public function logout(){
+        Auth::logout();
+
+        return view('index');
     }
 }

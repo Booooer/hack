@@ -9,6 +9,9 @@ a{
     text-decoration: none;
     color: #fff;
 }
+td input{
+    border-bottom: none;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -201,4 +204,7 @@ body{
 
 td, th{
     padding: 15px;
+}
+.addData input{
+    border: none;
 }

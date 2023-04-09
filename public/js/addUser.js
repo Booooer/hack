@@ -2,6 +2,11 @@ let btnReg = document.getElementById('btnReg')
 const regAnswer = document.querySelector('.reg-answer')
 const productAnswer = document.querySelector('.product-answer')
 let token = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+const btnHandler = document.getElementById('btnHandler')
+
+btnHandler.addEventListener('click',function(){
+    alert('Успешно отправлено в обработку')
+})
 
 console.log('here')
 
@@ -38,3 +43,5 @@ function sendProducts(){
     const array = [elementNm, categoryNm, total]
     sendData(array,"/add/product",productAnswer)
 }
+
+

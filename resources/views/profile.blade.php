@@ -13,12 +13,8 @@
     <div class="profile-container">
         <div class="profile">
             @if($user->role == 'admin')
-<<<<<<< HEAD
 
             <!-- вкладки -->
-
-=======
->>>>>>> 838ec49a3f941cefdfe23e0f790f8466a9d23da6
             <div class="choiceAddPanel">
                 <div class="addUsersPanel" onclick="selectUserPanel()">
                     Пользователи
@@ -34,7 +30,6 @@
             <!-- пользователи -->
 
             <div class="panel-add-users">
-
                 <div>
                     <p>Добавление пользователя</p>
                     <input type="text" placeholder="введите логин" id="regLogin">
@@ -45,6 +40,9 @@
                         <option value="analytic">Аналитик</option>
                     </select>
                     <button type="submit" id="btnReg" class="btnReg" onclick="sendUser()">Добавить</button>
+                    <div class="reg-answer">
+
+                    </div>
                 </div>
 
                 <div>
@@ -70,7 +68,7 @@
                                 <td>
                                     <select name="role" id="role">
                                         <option value="admin">admin</option>
-                                        <option value="commander">commander</option>
+                                        <option value="commandor">commander</option>
                                         <option value="buyer">buyer</option>
                                     </select>
                                 </td>
@@ -115,7 +113,7 @@
 
                 </div>
             </div>
-
+            
             <!-- итоги заказов -->
 
             <div class="panel-add-itog-zakaz">
@@ -129,37 +127,24 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($products as $product)
                         <tr>
-                            <td>Сметана 15%</td>
-                            <td>Соуса</td>
-                            <td>10</td>
+                            <td>{{ $product->element_nomenklatyri }}</td>
+                            <td>{{ $product->categorya_nomenklatyri }}</td>
+                            <td>{{ $product->itog }}</td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
             </div>
 
-            @endif
-<<<<<<< HEAD
             <div>
             </div>
-=======
         <div>
     </div>
+    @endif
     @if($user->role == 'commandor')
-    <div class="addData">
-    <p>Заполение области данных</p>
-    <form action="" method="post">
-        <label for="WorkSpace">Рабочая область:</label>
-        <input name="WorkSpace" list="WorkSpaceList" id="WorkSpace">
-        <datalist id="WorkSpaceList">
-            <option value="WorkSpace_1">Область работы 1</option>
-            <option value="WorkSpace_2">Область работы 2</option>
-        </datalist>
->>>>>>> 838ec49a3f941cefdfe23e0f790f8466a9d23da6
-
-
-            @if($user->role == 'commandor')
             <div class="addData">
                 <form action="" method="post">
                     <label for="WorkSpace">Рабочая область:</label>
@@ -292,6 +277,44 @@
 
                     <button>Отправить</button>
                 </form>
+                @endif
+                @if($user->role == 'buyer')
+                <p>Заказ поставщику</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Кофейня</th>
+                            <th>Поставщик</th>
+                            <th>Элемент номенклатуры</th>
+                            <th>Цена</th>
+                            <th>ПН</th>
+                            <th>ВТ</th>
+                            <th>СР</th>
+                            <th>ЧТ</th>
+                            <th>ПТ</th>
+                            <th>СБ</th>
+                            <th>ВС</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($finals as $final)
+                        <tr>
+                            <td>{{ $final->kofeinya }}</td>
+                            <td>{{ $final->postavshik }}</td>
+                            <td>{{ $final->element_nomenklatyri }}</td>
+                            <td>{{ $final->celevaya }}</td>
+                            <td>{{ $final->pn }}</td>
+                            <td>{{ $final->vt }}</td>
+                            <td>{{ $final->sr }}</td>
+                            <td>{{ $final->cht }}</td>
+                            <td>{{ $final->pt }}</td>
+                            <td>{{ $final->sb }}</td>
+                            <td>{{ $final->vs }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+                <button type="submit" id="btnHandler">В обработку</button>
                 @endif
             </div>
 </main>
