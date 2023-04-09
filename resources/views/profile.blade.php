@@ -151,17 +151,20 @@
             <div class="addData">
                 <form action="" method="post">
                     <label for="City">Город:</label>
-                    <input name="City" list="CityList" id="City" value="{{ $works->Город}}">
+                    <input name="City" id="City" value="{{ $works->Город}}">
 
                     <label for="Brand">Бренд:</label>
-                    <input name="Brand" list="BrandList" id="Brand" value="{{ $works->Город}}">
+                    <input name="Brand" id="Brand" value="{{ $works->Бренд}}">
+
+                    <label for="yrFace">Юр. лицо:</label>
+                    <input name="yrFace" id="yrFace" value="{{ $works->Юр_лицо}}">
 
                     <label for="CoffeeHouse">Кофейня:</label>
-                    <input name="CoffeeHouse" list="CoffeeHouseList" id="CoffeeHouse" value="{{ $works->Город}}">
+                    <input name="CoffeeHouse" list="CoffeeHouseList" id="CoffeeHouse" value="{{ $works->Кофейня}}">
                     
 
                     <label for="NomenclatureСategory">Категория номенклатуры:</label>
-                    <input name="NomenclatureСategory" list="NomenclatureСategoryList" id="NomenclatureСategory">
+                    <input name="NomenclatureСategory" list="NomenclatureСategoryList" id="NomenclatureСategory" value="{{ $works->Категория_номенклатуры}}">
                     <datalist id="NomenclatureСategoryList">
                         <option value="AlternativeMilk">Альтернативное молоко</option>
                         <option value="Preserves">Консервы</option>
@@ -183,16 +186,25 @@
                     </datalist>
 
                     <label for="ItemNomenclatureIiko">Элемент номенклатуры iiko:</label>
-                    <input name="ItemNomenclatureIiko" id="ItemNomenclatureIiko" value="{{ $works->Город}}">
+                    <input name="ItemNomenclatureIiko" id="ItemNomenclatureIiko" value="{{ $works->Элемент_номенклатуры_iiko}}">
+                    
+                    <label for="successDealler">Одобренные поставщики:</label>
+                    <input name="successDealler" id="successDealler" value="{{ $works->Одобренные_поставщики}}">
 
                     <label for="UnitMeasurementPackageSize">Единица измерения с учетом размера упаковки:</label>
-                    <input name="UnitMeasurementPackageSize" id="UnitMeasurementPackageSize" value="{{ $works->Еденица_измерения_с_учетом_размера_упаковки}}">
+                    <input name="UnitMeasurementPackageSize" id="UnitMeasurementPackageSize" value="{{ $works->Единица_измерения_с_учетом_размера_упаковки}}">
+                    
+                    <label for="highTemp">Рекоменд заказ при t-ре выше 22˚:</label>
+                    <input name="highTemp" id="highTemp" value="{{ $works->Рекоменд_заказ_при_t_ре_выше_22˚}}">
+                    
+                    <label for="lowTemp">Рекоменд заказ при t-ре ниже 22˚:</label>
+                    <input name="lowTemp" id="lowTemp" value="{{ $works->Рекоменд_заказ_при_t_ре_ниже_22˚}}">
 
                     <label for="TargetPrice">Целевая цена:</label>
-                    <input name="TargetPrice" id="TargetPrice" value="{{ $works->Город}}">
+                    <input name="TargetPrice" id="TargetPrice" value="{{ $works->Целевая_цена}}">
 
                     <label for="Supplier">Поставщик:</label>
-                    <input name="Supplier" list="SupplierList" id="Supplier">
+                    <input name="Supplier" list="SupplierList" id="Supplier" value="{{ $works->Поставщик}}">
                     <datalist id="SupplierList">
                         <option value="0">0</option>
                         <option value="GlobalFoods">Глобал Фудс</option>
@@ -203,59 +215,59 @@
                     </datalist>
 
                     <label for="ItemNomenclature">Элемент номенклатуры:</label>
-                    <input name="ItemNomenclature" id="ItemNomenclature" value="{{ $works->Город}}">
+                    <input name="ItemNomenclature" id="ItemNomenclature" value="{{ $works->Элемен_номенклатуры}}">
 
                     <label for="ABC">ABC:</label>
-                    <input name="ABC" list="ABCList" id="ABC" value="{{ $works->Город}}">
+                    <input name="ABC" list="ABCList" id="ABC" value="{{ $works->АВС}}">
 
                     <label for="LeftoversVersionManagement">Осатки Версия Управ-х, ед изм.:</label>
-                    <input name="LeftoversVersionManagement" id="LeftoversVersionManagement" value="{{ $works->Город}}">
+                    <input name="LeftoversVersionManagement" id="LeftoversVersionManagement" value="{{ $works->Остатки_Версия_Управ_х_ед_изм}}">
 
                     <label for="RemnantsOfIiko">Осатки IIKO, ед изм.:</label>
-                    <input name="RemnantsOfIiko" id="RemnantsOfIiko" value="{{ $works->Город}}">
+                    <input name="RemnantsOfIiko" id="RemnantsOfIiko" value="{{ $works->Остатки_IIKO_ед_изм}}">
 
                     <label for="Predict">Прогноз:</label>
-                    <input name="Predict" id="Predict" value="{{ $works->Город}}">
+                    <input name="Predict" id="Predict" value="{{ $works->Прогноз}}">
 
                     <label for="PredictEdIzm">Прогноз, ед.изм.:</label>
-                    <input name="PredictEdIzm" id="PredictEdIzm" value="{{ $works->Город}}">
+                    <input name="PredictEdIzm" id="PredictEdIzm" value="{{ $works->Прогноз_ед_изм}}">
 
                     <label for="Order">Заказ с учетом остков, ед. изм:</label>
-                    <input name="Order" id="Order" value="{{ $works->Город}}">
+                    <input name="Order" id="Order" value="{{ $works->Заказ_с_учетом_остатков_ед_изм}}">
 
                     <label for="CorrectionManager">Корретировка управляющего:</label>
-                    <input name="CorrectionManager" id="CorrectionManager" value="{{ $works->Город}}">
+                    <input name="CorrectionManager" id="CorrectionManager" value="{{ $works->Корректировка_управляющего}}">
 
                     <label for="ManagerComment">Комментарий управляющего:</label>
-                    <input name="ManagerComment" id="ManagerComment" value="{{ $works->Город}}">
+                    <input name="ManagerComment" id="ManagerComment" value="{{ $works->Комментарий_управляющего}}">
 
                     <label for="OrderAdjustmentManager">Заказ с учетом корректировки управляющего:</label>
-                    <input name="OrderAdjustmentManager" id="OrderAdjustmentManager" value="{{ $works->Город}}">
+                    <input name="OrderAdjustmentManager" id="OrderAdjustmentManager" value="{{ $works->Заказ_с_учетом_корректировки_управляющего}}">
 
                     <label for="Monday">Понедельник:</label>
-                    <input name="Monday" id="Monday">
+                    <input name="Monday" id="Monday" value="{{ $works->	ПН}}">
 
                     <label for="Tuesday">Вторник:</label>
-                    <input name="Tuesday" id="Tuesday">
+                    <input name="Tuesday" id="Tuesday" value="{{ $works->ВТ}}">
 
                     <label for="Wednesday">Среда:</label>
-                    <input name="Wednesday" id="Wednesday">
+                    <input name="Wednesday" id="Wednesday" value="{{ $works->СР}}">
 
                     <label for="Thursday">Четверг:</label>
-                    <input name="Thursday" id="Thursday">
+                    <input name="Thursday" id="Thursday" value="{{ $works->ЧТ}}">
 
                     <label for="Friday">Пятница:</label>
-                    <input name="Friday" id="Friday">
+                    <input name="Friday" id="Friday" value="{{ $works->ПТ}}">
 
                     <label for="Saturday">Суббота:</label>
-                    <input name="Saturday" id="Saturday">
+                    <input name="Saturday" id="Saturday" value="{{ $works->СБ}}">
 
                     <label for="Sunday">Воскресение:</label>
-                    <input name="Sunday" id="Sunday">
+                    <input name="Sunday" id="Sunday" value="{{ $works->ВС}}">
 
 
                     <label for="Check">Проверка:</label>
-                    <input name="Check" id="Check">
+                    <input name="Check" id="Check" value="{{ $works->Проверка}}">
 
                     <button>Отправить</button>
                 </form>
