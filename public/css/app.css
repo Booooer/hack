@@ -186,7 +186,7 @@ body{
     justify-content: space-between;
 }
 
-.addUsersPanel, .addProductsPanel{
+.addUsersPanel, .addProductsPanel, .addItogZakazPanel{
     width: 50%;
     display: flex;
     justify-content: center;
@@ -197,4 +197,8 @@ body{
 
 .addPanelActive{
     background-color: brown;
+}
+
+td, th{
+    padding: 15px;
 }
