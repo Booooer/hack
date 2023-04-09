@@ -8,7 +8,9 @@
         <div class="profile-role">
             <p>Ваша роль:&nbsp;</p>
             <p>{{ $user->role }}</p>
-            <a href="/logout">Отправить</a>
+        </div>
+        <div class="logout">
+            <a href="/logout">Выход</a>
         </div>
     </div>
     <div class="profile-container">
@@ -68,7 +70,6 @@
                                 </td>
                                 <td>
                                     <select name="role" id="role">
-                                        <option value="Админ">Админ</option>
                                         <option value="Аналитик">Аналитик</option>
                                         <option value="Управляющий">Управляющий</option>
                                         <option value="Закупщик">Закупщик</option>

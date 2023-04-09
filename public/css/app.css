@@ -205,3 +205,11 @@ body{
 td, th{
     padding: 15px;
 }
+
+.logout {
+    margin: 10px 0 -20px 0;
+}
+
+.logout a{
+    color: #000;
+}
