@@ -6,14 +6,14 @@
         <img src="/images/logo.jpg" alt="">
         <h1>Личный кабинет</h1>
         <div class="profile-role">
-            <p>Ваша роль:</p>
+            <p>Ваша роль:&nbsp;</p>
             <p>{{ $user->role }}</p>
             <a href="/logout">Отправить</a>
         </div>
     </div>
     <div class="profile-container">
         <div class="profile">
-        @if($user->role == 'admin')
+        @if(Auth::user()->role == 'Админ')
 
             <!-- вкладки -->
             <div class="choiceAddPanel">
@@ -36,9 +36,9 @@
                     <input type="text" placeholder="введите логин" id="regLogin">
                     <input type="text" placeholder="введите пароль" id="regPassword">
                     <select name="role" id="regRole">
-                        <option value="commandor">Управляющий</option>
-                        <option value="buyer">Закупщик</option>
-                        <option value="analytic">Аналитик</option>
+                        <option value="Управляющий">Управляющий</option>
+                        <option value="Закупщик">Закупщик</option>
+                        <option value="Аналитик">Аналитик</option>
                     </select>
                     <button type="submit" id="btnReg" class="btnReg" onclick="sendUser()">Добавить</button>
                     <div class="reg-answer">
@@ -50,9 +50,9 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>login</th>
-                                <th>this role</th>
-                                <th>all role</th>
+                                <th>Логин</th>
+                                <th>Роль</th>
+                                <th>Новая роль</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -68,9 +68,10 @@
                                 </td>
                                 <td>
                                     <select name="role" id="role">
-                                        <option value="admin">admin</option>
-                                        <option value="commandor">commander</option>
-                                        <option value="buyer">buyer</option>
+                                        <option value="Админ">Админ</option>
+                                        <option value="Аналитик">Аналитик</option>
+                                        <option value="Управляющий">Управляющий</option>
+                                        <option value="Закупщик">Закупщик</option>
                                     </select>
                                 </td>
                                 <td>
@@ -145,7 +146,7 @@
         <div>
     </div>
     @endif
-    @if($user->role == 'commandor')
+    @if(Auth::user()->role == 'Управляющий')
             <div class="addData">
                 <form action="" method="post">
                     <label for="City">Город:</label>
@@ -272,7 +273,7 @@
                     <button>Отправить</button>
                 </form>
                 @endif
-                @if(Auth::user()->role == 'buyer')
+                @if(Auth::user()->role == 'Закупщик')
                 <p>Заказ поставщику</p>
                 <table>
                     <thead>
