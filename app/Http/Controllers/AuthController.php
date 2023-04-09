@@ -8,21 +8,24 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\FinalOrder;
 use App\Models\Product;
+use App\Models\WorkSpace;
 
 
 class AuthController extends Controller
 {
-
-
     public function show()
     {
         $users = User::get();
         $user = Auth::user();
         $products = Product::all();
         $finals = FinalOrder::get();
-        $role = $user->role;
-       
-        return view('profile', compact('users','user','products','finals','role'));
+        $works = WorkSpace::first();
+
+        if (!$user) {
+         return view('index');
+        }
+
+        return view('profile', compact('users','user','products','finals','works'));
     }
 
     public function auth(Request $request)

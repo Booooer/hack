@@ -33,5 +33,5 @@ Route::post('/reg','App\Http\Controllers\AuthController@addUser');
 
 Route::post('/add/product','App\Http\Controllers\ProductController@add');
 
-Route::post("logout",'App\Http\Controllers\AuthController@logout')->name('logout');
+Route::get("logout",'App\Http\Controllers\AuthController@logout')->name('logout');
 

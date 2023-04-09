@@ -150,23 +150,14 @@
             <div class="addData">
                 <form action="" method="post">
                     <label for="City">Город:</label>
-                    <input name="City" list="CityList" id="City">
-                    <datalist id="CityList">
-                        <option value="Tyumen">Тюмень</option>
-                        <option value="Moskow">Москва</option>
-                    </datalist>
+                    <input name="City" list="CityList" id="City" value="{{ $works->Город}}">
 
                     <label for="Brand">Бренд:</label>
-                    <input name="Brand" list="BrandList" id="Brand">
-                    <datalist id="BrandList">
-                        <option value="Parusa">Parusa</option>
-                    </datalist>
+                    <input name="Brand" list="BrandList" id="Brand" value="{{ $works->Город}}">
 
                     <label for="CoffeeHouse">Кофейня:</label>
-                    <input name="CoffeeHouse" list="CoffeeHouseList" id="CoffeeHouse">
-                    <datalist id="CoffeeHouseList">
-                        <option value="CoffeeHouse">Кофейня</option>
-                    </datalist>
+                    <input name="CoffeeHouse" list="CoffeeHouseList" id="CoffeeHouse" value="{{ $works->Город}}">
+                    
 
                     <label for="NomenclatureСategory">Категория номенклатуры:</label>
                     <input name="NomenclatureСategory" list="NomenclatureСategoryList" id="NomenclatureСategory">
@@ -191,13 +182,13 @@
                     </datalist>
 
                     <label for="ItemNomenclatureIiko">Элемент номенклатуры iiko:</label>
-                    <input name="ItemNomenclatureIiko" id="ItemNomenclatureIiko">
+                    <input name="ItemNomenclatureIiko" id="ItemNomenclatureIiko" value="{{ $works->Город}}">
 
                     <label for="UnitMeasurementPackageSize">Единица измерения с учетом размера упаковки:</label>
-                    <input name="UnitMeasurementPackageSize" id="UnitMeasurementPackageSize">
+                    <input name="UnitMeasurementPackageSize" id="UnitMeasurementPackageSize" value="{{ $works->Еденица_измерения_с_учетом_размера_упаковки}}">
 
                     <label for="TargetPrice">Целевая цена:</label>
-                    <input name="TargetPrice" id="TargetPrice">
+                    <input name="TargetPrice" id="TargetPrice" value="{{ $works->Город}}">
 
                     <label for="Supplier">Поставщик:</label>
                     <input name="Supplier" list="SupplierList" id="Supplier">
@@ -211,39 +202,34 @@
                     </datalist>
 
                     <label for="ItemNomenclature">Элемент номенклатуры:</label>
-                    <input name="ItemNomenclature" id="ItemNomenclature">
+                    <input name="ItemNomenclature" id="ItemNomenclature" value="{{ $works->Город}}">
 
                     <label for="ABC">ABC:</label>
-                    <input name="ABC" list="ABCList" id="ABC">
-                    <datalist id="ABCList">
-                        <option value="15%">15%</option>
-                        <option value="5%">5%</option>
-                        <option value="80%">80%</option>
-                    </datalist>
+                    <input name="ABC" list="ABCList" id="ABC" value="{{ $works->Город}}">
 
                     <label for="LeftoversVersionManagement">Осатки Версия Управ-х, ед изм.:</label>
-                    <input name="LeftoversVersionManagement" id="LeftoversVersionManagement">
+                    <input name="LeftoversVersionManagement" id="LeftoversVersionManagement" value="{{ $works->Город}}">
 
                     <label for="RemnantsOfIiko">Осатки IIKO, ед изм.:</label>
-                    <input name="RemnantsOfIiko" id="RemnantsOfIiko">
+                    <input name="RemnantsOfIiko" id="RemnantsOfIiko" value="{{ $works->Город}}">
 
                     <label for="Predict">Прогноз:</label>
-                    <input name="Predict" id="Predict">
+                    <input name="Predict" id="Predict" value="{{ $works->Город}}">
 
                     <label for="PredictEdIzm">Прогноз, ед.изм.:</label>
-                    <input name="PredictEdIzm" id="PredictEdIzm">
+                    <input name="PredictEdIzm" id="PredictEdIzm" value="{{ $works->Город}}">
 
                     <label for="Order">Заказ с учетом остков, ед. изм:</label>
-                    <input name="Order" id="Order">
+                    <input name="Order" id="Order" value="{{ $works->Город}}">
 
                     <label for="CorrectionManager">Корретировка управляющего:</label>
-                    <input name="CorrectionManager" id="CorrectionManager">
+                    <input name="CorrectionManager" id="CorrectionManager" value="{{ $works->Город}}">
 
                     <label for="ManagerComment">Комментарий управляющего:</label>
-                    <input name="ManagerComment" id="ManagerComment">
+                    <input name="ManagerComment" id="ManagerComment" value="{{ $works->Город}}">
 
                     <label for="OrderAdjustmentManager">Заказ с учетом корректировки управляющего:</label>
-                    <input name="OrderAdjustmentManager" id="OrderAdjustmentManager">
+                    <input name="OrderAdjustmentManager" id="OrderAdjustmentManager" value="{{ $works->Город}}">
 
                     <label for="Monday">Понедельник:</label>
                     <input name="Monday" id="Monday">
