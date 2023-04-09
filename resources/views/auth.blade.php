@@ -12,7 +12,7 @@
             </div>
             <div class="strokeLogin">
                 <label id="passwordLabel" for="password">Пароль</label>
-                <input id="password" type="text" name="password">
+                <input id="password" type="password" name="password">
             </div>
             <div class="showMessage">
                 {{ $errors->first() }}
