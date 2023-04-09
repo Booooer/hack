@@ -10,11 +10,13 @@ use App\Models\User;
 class AuthController extends Controller
 {
 
+
     public function show()
     {
         $users = User::get();
 
         return view('profile', compact('users'));
+
     }
 
     public function auth(Request $request)

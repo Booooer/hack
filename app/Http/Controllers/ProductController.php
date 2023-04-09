@@ -11,6 +11,10 @@ class ProductController extends Controller
     public function add(){
         $data = json_decode(file_get_contents("php://input"));
 
+        if (!isset($data)) {
+            return json_encode("При добавлении произошла ошибка");
+        }
+
         $add = Product::create([
             'categorya_3' => "Товары",
             'categorya_nomenklatyri' => $data[1],
