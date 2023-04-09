@@ -3,32 +3,38 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash; 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
 class AuthController extends Controller
 {
-    public function show(){
-        $user = Auth::user();
 
-        if ($user) {
-            return view('profile',compact('user'));
-        }
-        return back();
+
+    public function show()
+    {
+        $users = User::get();
+
+        return view('profile', compact('users'));
+
     }
 
-    public function auth(Request $request){
-        $user = User::where('login',$request->login)->where('password',$request->password)->first();
+    public function auth(Request $request)
+    {
+        $user = User::where('login', $request->login)->where('password', $request->password)->first();
+        $users = User::get();
 
         if (isset($user)) {
             Auth::login($user);
-            return view('profile',compact('user'));
+            return view('profile', ['user' => $user, 'users' => $users]);
         }
         return back()->withErrors(['message' => 'Авторизация не удалась!']);
     }
 
-    public function addUser(){
+
+
+    public function addUser()
+    {
         $data = json_decode(file_get_contents("php://input"));
 
         if ($this->checkUniqueUser($data[0])) {
@@ -39,17 +45,22 @@ class AuthController extends Controller
             ]);
 
             return json_encode("Пользователь успешно добавлен");
-        }
-        else{
+        } else {
             return json_encode("Такой пользователь уже есть");
         }
     }
 
-    private function checkUniqueUser($login){
-        $check = User::where('login',$login)->first();
+    private function checkUniqueUser($login)
+    {
+        $check = User::where('login', $login)->first();
         if (isset($check)) {
             return false;
         }
         return true;
+    }
+
+    public function updateRole(Request $request)
+    {
+        User::where('login', $request->login)->update(['role' => $request->role]);
     }
 }
