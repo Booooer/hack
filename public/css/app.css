@@ -30,7 +30,7 @@ body{
     width: 100vw;
     height: 100vh;
     background: no-repeat url("/images/main_back.png");
-    background-size: contain;
+    background-size: cover;
     display: flex;
     justify-content: center;
 }
