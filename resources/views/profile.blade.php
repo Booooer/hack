@@ -8,6 +8,7 @@
         <div class="profile-role">
             <p>Ваша роль:</p>
             <p>{{ $user->role }}</p>
+            <a href="/logout">Отправить</a>
         </div>
     </div>
     <div class="profile-container">
@@ -147,13 +148,6 @@
     @if($user->role == 'commandor')
             <div class="addData">
                 <form action="" method="post">
-                    <label for="WorkSpace">Рабочая область:</label>
-                    <input name="WorkSpace" list="WorkSpaceList" id="WorkSpace">
-                    <datalist id="WorkSpaceList">
-                        <option value="WorkSpace_1">Область работы 1</option>
-                        <option value="WorkSpace_2">Область работы 2</option>
-                    </datalist>
-
                     <label for="City">Город:</label>
                     <input name="City" list="CityList" id="City">
                     <datalist id="CityList">

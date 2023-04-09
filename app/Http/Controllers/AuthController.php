@@ -23,12 +23,11 @@ class AuthController extends Controller
         $role = $user->role;
        
         return view('profile', compact('users','user','products','finals','role'));
-
     }
 
     public function auth(Request $request)
     {
-        $user = User::where('login', $request->login)->where('password', $request->password)->first();
+        $user = User::where('login', $request->login)->where('password',$request->password)->first();
         $users = User::get();
 
         if (isset($user)) {
