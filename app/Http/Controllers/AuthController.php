@@ -12,7 +12,10 @@ class AuthController extends Controller
     public function show(){
         $user = Auth::user();
 
-        return view('profile',compact('user'));
+        if ($user) {
+            return view('profile',compact('user'));
+        }
+        return back();
     }
 
     public function auth(Request $request){

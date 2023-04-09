@@ -2,10 +2,17 @@
 @section('title','Авторизация')
 @section('content')
 <main>
+    <div class="profile-info">
+        <img src="/images/logo.jpg" alt="">
+        <h1>Личный кабинет</h1>
+        <div class="profile-role">
+            <p>Ваша роль:</p>
+            <p>{{ $user->role }}</p>
+        </div>
+    </div>
     <div class="profile-container">
         <div class="profile">
             @if($user->role == 'admin')
-
             <div class="choiceAddPanel">
                 <div class="addUsersPanel" onclick="selectUserPanel()">
                     Пользователи
@@ -63,6 +70,7 @@
     </div>
     @if($user->role == 'commandor')
     <div class="addData">
+    <p>Заполение области данных</p>
     <form action="" method="post">
         <label for="WorkSpace">Рабочая область:</label>
         <input name="WorkSpace" list="WorkSpaceList" id="WorkSpace">
